@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>プライバシーポリシー — 資格クエスト</title>
+<style>
+:root { --ink:#0F172A; --gold:#D4A017; --paper:#FAFAFA; --muted:#64748B; --line:#E2E8F0; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.8;
+  padding: 24px 16px 80px;
+}
+.container { max-width: 720px; margin: 0 auto; }
+header { padding: 32px 0 24px; border-bottom: 1px solid var(--line); margin-bottom: 32px; }
+.logo { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 18px; margin-bottom: 8px; }
+.logo-mark { width: 32px; height: 32px; border-radius: 8px; background: var(--ink); display: grid; place-items: center; color: white; font-size: 16px; }
+h1 { font-size: 28px; font-weight: 800; margin-top: 8px; letter-spacing: -0.5px; }
+.last-updated { color: var(--muted); font-size: 14px; margin-top: 8px; }
+h2 { font-size: 18px; font-weight: 700; margin: 32px 0 12px; letter-spacing: -0.3px; }
+p, ul { font-size: 15px; color: #1E293B; }
+ul { padding-left: 20px; margin: 12px 0; }
+li { margin: 6px 0; }
+.highlight {
+  background: linear-gradient(135deg, rgba(212,160,23,0.08), rgba(212,160,23,0.03));
+  border: 1px solid rgba(212,160,23,0.25);
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 16px 0;
+}
+.highlight strong { color: var(--gold); }
+footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+a { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="logo">
+    <div class="logo-mark">🎓</div>
+    <span>資格クエスト</span>
+  </div>
+  <h1>プライバシーポリシー</h1>
+  <p class="last-updated">最終更新: 2026年5月16日</p>
+</header>
+
+<div class="highlight">
+  <p><strong>結論</strong>: 本アプリはユーザーの個人情報を一切収集しません。ネットワーク通信を一切行わず、すべてのデータは端末内のみに保存されます。</p>
+</div>
+
+<h2>1. 収集する情報</h2>
+<p>本アプリは以下の個人情報を一切収集しません:</p>
+<ul>
+  <li>氏名・メールアドレス・電話番号などの個人識別情報</li>
+  <li>位置情報</li>
+  <li>連絡先・カレンダー・写真などのデバイス内データ</li>
+  <li>広告ID・端末識別子</li>
+  <li>使用状況・クラッシュレポート・分析データ</li>
+</ul>
+
+<h2>2. データの保存先</h2>
+<p>ユーザーが本アプリで入力・記録した以下のデータは、すべて端末内のローカルデータベース (SQLite/Room) にのみ保存されます:</p>
+<ul>
+  <li>登録した資格試験の情報</li>
+  <li>申込日・試験日・受験料などの日程・金額</li>
+  <li>学習タイマー・学習ログ</li>
+  <li>取得済資格・取得年度</li>
+  <li>ジャンル選択・目標時間などの設定</li>
+</ul>
+<p>これらのデータは外部サーバーへ送信されることはありません。</p>
+
+<h2>3. ネットワーク通信</h2>
+<p>本アプリは <code>INTERNET</code> 権限を取得しておらず、ネットワーク通信を一切行いません。例外として以下の場合のみ、ユーザーの能動的な操作により外部ブラウザが起動します:</p>
+<ul>
+  <li>「公式サイトで確認」ボタンをタップしたとき (Android のシステムブラウザに各試験の公式サイトURLを渡す)</li>
+</ul>
+<p>このとき、本アプリは URL を渡すだけで、通信そのものは Android システムのブラウザが行います。</p>
+
+<h2>4. 通知</h2>
+<p>申込締切日のリマインダー通知を、端末内のスケジューラ (WorkManager) によりローカルに生成します。サーバー経由のプッシュ通知は使用していません。通知を受け取るには <code>POST_NOTIFICATIONS</code> 権限が必要です。</p>
+
+<h2>5. 学習タイマーサービス</h2>
+<p>画面オフ中の学習時間計測のため、フォアグラウンドサービス権限 (<code>FOREGROUND_SERVICE</code>) を使用します。これは計測中のみ動作し、計測停止後は終了します。</p>
+
+<h2>6. 第三者への提供</h2>
+<p>ユーザーデータの第三者提供は一切ありません。広告SDK・解析SDK・クラッシュレポートSDKは搭載していません。</p>
+
+<h2>7. 子供のプライバシー</h2>
+<p>本アプリは全年齢を対象としており、13歳未満の子供から個人情報を意図的に収集することはありません (そもそも収集しません)。</p>
+
+<h2>8. データの削除</h2>
+<p>すべてのデータは端末内のみに存在するため、以下のいずれかでデータを完全削除できます:</p>
+<ul>
+  <li>Android 設定 → アプリ → 資格クエスト → ストレージ → データを消去</li>
+  <li>本アプリをアンインストール</li>
+</ul>
+<p>サーバーにデータがないため、削除リクエストの送信は不要です。</p>
+
+<h2>9. ポリシーの変更</h2>
+<p>本ポリシーが変更される場合、アプリのアップデート時に通知し、本ページに更新日を明記します。</p>
+
+<h2>10. お問い合わせ</h2>
+<p>本ポリシーに関するご質問は、Google Play ストアのアプリページにある「デベロッパーに連絡」よりお願いいたします。</p>
+
+<footer>
+  <p>© 2026 資格クエスト</p>
+</footer>
+
+</div>
+</body>
+</html>
