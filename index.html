@@ -268,6 +268,33 @@ h2 {
 .compare-cell.yes { color: #4ADE80; font-weight: 700; }
 .compare-cell.no { color: rgba(165,180,252,0.5); }
 
+/* Dashboard PR */
+.dashboard-pr {
+  display: grid;
+  grid-template-columns: minmax(240px, 320px) 1fr;
+  gap: 48px;
+  align-items: center;
+  margin-top: 32px;
+}
+.dashboard-mock {
+  background: linear-gradient(180deg, #1E1B4B 0%, #0F0728 100%);
+  border-radius: 36px;
+  padding: 14px;
+  border: 3px solid rgba(255,255,255,0.1);
+  box-shadow: 0 50px 120px rgba(0,0,0,0.5), inset 0 1px 0 rgba(255,255,255,0.1);
+}
+.dashboard-mock img {
+  width: 100%;
+  height: auto;
+  border-radius: 24px;
+  display: block;
+}
+.dashboard-rows { display: flex; flex-direction: column; gap: 18px; }
+@media (max-width: 768px) {
+  .dashboard-pr { grid-template-columns: 1fr; gap: 32px; }
+  .dashboard-mock { max-width: 300px; margin: 0 auto; }
+}
+
 /* CTA bottom */
 .cta-bottom { text-align: center; padding: 80px 24px; background: linear-gradient(180deg, transparent, rgba(124,58,237,0.1)); border-radius: 36px; margin: 60px 0; }
 footer { padding: 40px 0 60px; text-align: center; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); margin-top: 60px; }
@@ -404,8 +431,8 @@ footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
         <div class="value-row">
           <div class="value-icon">🚫</div>
           <div class="value-text">
-            <strong>広告・課金誘導ゼロ</strong>
-            <span>あなたの集中を邪魔しない。学習に没頭できる純粋なツール。</span>
+            <strong>広告ゼロ・アプリ内課金なし</strong>
+            <span>表示広告・サブスク・追加課金は一切ありません。参考書購入の動線は Amazon アソシエイトリンク経由 (任意・脚注で明示)。</span>
           </div>
         </div>
         <div class="value-row">
@@ -438,6 +465,52 @@ footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
         </ul>
       </div>
     </div>
+  </section>
+
+  <section>
+    <div class="section-eyebrow">— Dashboard</div>
+    <h2>時間が積み上がる、<br>あなたの<span class="accent">キャリア資産</span>ダッシュボード。</h2>
+    <p class="section-sub">資格を取るだけでは終わらない。学習時間と取得資格を「想定市場価値」に変換し、自分のキャリアを資産運用のように可視化します。</p>
+
+    <div class="dashboard-pr">
+      <div class="dashboard-mock">
+        <img src="screenshots/home.png" alt="資格クエスト ホーム画面: 想定市場価値・ジャンル別配分・次の試験カウントダウン" loading="lazy">
+      </div>
+      <div class="dashboard-rows">
+        <div class="value-row">
+          <div class="value-icon">📈</div>
+          <div class="value-text">
+            <strong>想定市場価値の自動算出</strong>
+            <span>取得済資格の想定年収レンジを合算し、現在のキャリア資産を一目で確認。</span>
+          </div>
+        </div>
+        <div class="value-row">
+          <div class="value-icon">🎯</div>
+          <div class="value-text">
+            <strong>ジャンル別の投資配分</strong>
+            <span>IT・金融・語学などの取得資格ジャンルをドーナツチャートで可視化。偏りも一目瞭然。</span>
+          </div>
+        </div>
+        <div class="value-row">
+          <div class="value-icon">⏳</div>
+          <div class="value-text">
+            <strong>次の合格までのカウントダウン</strong>
+            <span>申込締切と試験日が「○日後」で表示。学習計画に直結する迫力ある可視化。</span>
+          </div>
+        </div>
+        <div class="value-row">
+          <div class="value-icon">💎</div>
+          <div class="value-text">
+            <strong>1時間の学習 = 資産の積み上げ</strong>
+            <span>学習タイマーで計測した時間が、累計学習時間として目標年収に向かって着実に積み上がります。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <p style="margin-top: 24px; font-size: 12px; color: var(--muted); text-align: center;">
+      ※ 想定市場価値は試験ごとの想定年収レンジを参考値として加算したものです。実際の年収を保証するものではありません。
+    </p>
   </section>
 
   <section id="download">
