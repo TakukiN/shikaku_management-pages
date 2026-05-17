@@ -4,8 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#0F0728">
-<title>資格クエスト — 時間投資と年収UPを、賢く管理する。</title>
-<meta name="description" content="¥1,000買い切り。600試験以上を収録した完全オフライン資格管理アプリ。学習時間を「想定年収UP額」「時間配当金」に変換し、キャリアを資産運用のように可視化。">
+<title>Chronofolio — 時間投資と年収UPを、賢く管理する。</title>
+<meta name="description" content="¥1,000買い切り。600試験以上を収録した完全オフラインの資格管理アプリ。学習時間を「想定年収UP額」「時間配当金」に変換し、キャリアを資産運用のように可視化。">
+<meta property="og:title" content="Chronofolio — 時間投資と年収UPを、賢く管理する。">
+<meta property="og:description" content="¥1,000買い切り・完全オフライン・広告ゼロ。600試験以上を網羅した資格管理アプリ。">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <style>
 :root {
   --bg: #0F0728;
@@ -50,11 +54,12 @@ nav { padding: 24px 0; display: flex; justify-content: space-between; align-item
 .logo { display: flex; align-items: center; gap: 12px; font-weight: 800; font-size: 20px; letter-spacing: -0.02em; }
 .logo-icon {
   width: 40px; height: 40px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--pink) 100%);
+  background: #0A0A0C;
   border-radius: 12px;
   display: grid; place-items: center;
-  font-size: 22px;
+  border: 1px solid rgba(255,255,255,0.08);
 }
+.logo-icon svg { width: 22px; height: 22px; }
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   padding: 14px 28px;
@@ -141,29 +146,6 @@ h1 .accent {
   padding: 18px;
   gap: 12px;
 }
-.demo-card {
-  background: linear-gradient(135deg, rgba(124,58,237,0.4) 0%, rgba(236,72,153,0.3) 100%);
-  border: 1px solid rgba(255,255,255,0.1);
-  border-radius: 18px;
-  padding: 18px;
-  flex: 1;
-  display: flex; flex-direction: column;
-  position: relative;
-  animation: swipeWiggle 4s ease-in-out infinite;
-}
-@keyframes swipeWiggle {
-  0%, 100% { transform: translateX(0) rotate(0); }
-  20% { transform: translateX(40px) rotate(6deg); }
-  40% { transform: translateX(0) rotate(0); }
-  60% { transform: translateX(-40px) rotate(-6deg); }
-  80% { transform: translateX(0) rotate(0); }
-}
-.demo-card .genre { font-size: 11px; color: var(--gold); margin-bottom: 6px; }
-.demo-card .name { font-size: 20px; font-weight: 800; margin-bottom: 8px; line-height: 1.2; }
-.demo-card .desc { font-size: 11px; color: var(--muted); flex: 1; }
-.demo-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
-.demo-chip { font-size: 9px; padding: 4px 8px; border-radius: 99px; background: rgba(255,255,255,0.1); }
-
 /* Sections */
 section { padding: 80px 0; }
 .section-eyebrow { color: var(--gold); font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; }
@@ -350,8 +332,14 @@ footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
 <div class="container">
   <nav>
     <div class="logo">
-      <div class="logo-icon">🎓</div>
-      <span>資格クエスト</span>
+      <div class="logo-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 2 L26 2 L16 16 L26 30 L6 30 L16 16 Z" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 7 L20 7 L16 13 Z" fill="#FFFFFF"/>
+          <circle cx="16" cy="24" r="2" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      <span>Chronofolio</span>
     </div>
     <a href="#download" class="btn ghost">ダウンロード</a>
   </nav>
@@ -359,9 +347,9 @@ footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
   <section class="hero">
     <span class="hero-eyebrow">¥1,000 買い切り ・ 完全オフライン ・ 広告ゼロ</span>
     <h1>時間投資と<br><span class="accent">年収UP</span>を、<br>賢く管理する。</h1>
-    <p class="lead">資格は、未来のあなたへの投資。<br>学習時間を「想定年収UP額」と「時間配当金」に変換し、<br>あなたのキャリアを資産運用のように可視化します。</p>
+    <p class="lead">あなたの学習時間という見えない投資を、<br>「想定年収UP額」「時間配当金」に変換し、<br>キャリアを資産運用のように可視化する Android アプリ。</p>
     <div class="hero-ctas">
-      <a href="#download" class="btn primary">▶ Play Storeで購入 ¥1,000</a>
+      <a href="#download" class="btn primary">Play Storeで購入 ¥1,000</a>
       <a href="#features" class="btn ghost">機能を見る</a>
     </div>
     <div class="price-tag">
@@ -370,41 +358,35 @@ footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
     </div>
 
     <div style="margin-top: 56px;">
-      <div class="phone-mockup">
-        <div class="phone-screen">
-          <div style="font-size:11px;color:var(--muted);">資格をスワイプ →</div>
-          <div class="demo-card">
-            <div class="genre">💻 IT・情報</div>
-            <div class="name">応用情報技術者試験</div>
-            <div class="desc">中堅エンジニア向け定番の国家試験。<br>午後で記述力も鍛えられる。</div>
-            <div class="demo-chips">
-              <span class="demo-chip">💴 ¥7,500</span>
-              <span class="demo-chip">⏱ 500h</span>
-              <span class="demo-chip">📊 ★★★☆☆</span>
-            </div>
-            <div class="demo-chips" style="margin-top:6px;">
-              <span class="demo-chip" style="color:var(--gold);">💰 500-800万円</span>
-            </div>
-          </div>
-        </div>
+      <div class="dashboard-mock" style="max-width: 340px; margin: 0 auto;">
+        <img src="screenshots/home.png" alt="ダッシュボード: 想定年収UP額・次の試験・連続学習日数・時間配当金" loading="lazy">
       </div>
+    </div>
+  </section>
+
+  <section style="padding-top: 40px;">
+    <div class="stats">
+      <div class="stat"><div class="stat-num">600+</div><div class="stat-label">収録試験</div></div>
+      <div class="stat"><div class="stat-num">12</div><div class="stat-label">全ジャンル横断</div></div>
+      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">オフライン動作</div></div>
+      <div class="stat"><div class="stat-num">0</div><div class="stat-label">広告・サブスク</div></div>
     </div>
   </section>
 
   <section id="features">
     <div class="section-eyebrow">— Features</div>
-    <h2>「気軽に試せて、本気で続く」<br>を両立する6つの体験。</h2>
-    <p class="section-sub">資格は選び始めるのが一番難しい。だからこそ、最初の一歩を最高にする。</p>
+    <h2>キャリアを「資産運用」<br>として可視化する6つの体験。</h2>
+    <p class="section-sub">学習時間という見えない投資を、年収UP額・時間配当金として数値化。資格選びから合格まで、迷子にさせません。</p>
     <div class="features">
       <div class="feature">
-        <span class="feature-emoji">💘</span>
-        <h3>スワイプで発見</h3>
-        <p>気軽に「気になる」「パス」をスワイプ。1セッション15枚で疲れない設計。</p>
+        <span class="feature-emoji">💰</span>
+        <h3>想定年収UP額の自動算出</h3>
+        <p>各資格の取得 / 進捗状況から、年間想定 UP 額をリアルタイム計算。学習投資のROIが一目で分かる。</p>
       </div>
       <div class="feature">
         <span class="feature-emoji">🏆</span>
         <h3>合格バッジ・ポートフォリオ</h3>
-        <p>取得した資格は🏆ゴールドバッジで永遠にコレクション。自分の歴史を形に。</p>
+        <p>取得した資格はゴールドバッジで永遠にコレクション。同ジャンル難度+1 を AI 風スコアで提案。</p>
       </div>
       <div class="feature">
         <span class="feature-emoji">📅</span>
@@ -413,8 +395,8 @@ footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
       </div>
       <div class="feature">
         <span class="feature-emoji">⏱</span>
-        <h3>フォアグラウンド学習タイマー</h3>
-        <p>画面を消しても継続。ロックスクリーンで通知。自動でログ記録。</p>
+        <h3>バックグラウンド学習タイマー</h3>
+        <p>他アプリ使用中も継続。フローティングオーバーレイで残り時間が常に視界に。自動でログ記録。</p>
       </div>
       <div class="feature">
         <span class="feature-emoji">🔔</span>
@@ -422,23 +404,14 @@ footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
         <p>7/3/1日前の自動通知。「申込忘れ」で1年棒に振る悲劇を予防。</p>
       </div>
       <div class="feature">
-        <span class="feature-emoji">💰</span>
-        <h3>想定年収レンジ表示</h3>
-        <p>各資格の取得後の市場価値を明示。学習投資のROIが見える。</p>
+        <span class="feature-emoji">💘</span>
+        <h3>スワイプで日替わり発見</h3>
+        <p>取得済ジャンル × 年収 gap × 多様性で重み付け。日替わりランダムで毎日新鮮な提案。</p>
       </div>
     </div>
     <p style="margin-top: 24px; font-size: 12px; color: var(--muted); text-align: center;">
-      ※ 想定年収レンジは公的統計・転職サービス公開データを参考にした目安です。個別の年収を保証するものではありません。
+      ※ 想定年収レンジ・UP額・配当金は公的統計と独自ヒューリスティック指標による目安です。個別の年収を保証するものではありません。
     </p>
-  </section>
-
-  <section>
-    <div class="stats">
-      <div class="stat"><div class="stat-num">600+</div><div class="stat-label">収録試験</div></div>
-      <div class="stat"><div class="stat-num">12</div><div class="stat-label">全ジャンル横断</div></div>
-      <div class="stat"><div class="stat-num">100%</div><div class="stat-label">オフライン動作</div></div>
-      <div class="stat"><div class="stat-num">0</div><div class="stat-label">広告・サブスク</div></div>
-    </div>
   </section>
 
   <section>
@@ -501,56 +474,11 @@ footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
     </div>
   </section>
 
-  <section>
-    <div class="section-eyebrow">— Dashboard</div>
-    <h2>時間が積み上がる、<br>あなたの<span class="accent">キャリア資産</span>ダッシュボード。</h2>
-    <p class="section-sub">資格を取るだけでは終わらない。学習時間と取得資格を「想定市場価値」に変換し、自分のキャリアを資産運用のように可視化します。</p>
-
-    <div class="dashboard-pr">
-      <div class="dashboard-mock">
-        <img src="screenshots/home.png" alt="資格クエスト ホーム画面: 想定市場価値・ジャンル別配分・次の試験カウントダウン" loading="lazy">
-      </div>
-      <div class="dashboard-rows">
-        <div class="value-row">
-          <div class="value-icon">📈</div>
-          <div class="value-text">
-            <strong>想定市場価値の自動算出</strong>
-            <span>取得済資格の想定年収レンジを合算し、現在のキャリア資産を一目で確認。</span>
-          </div>
-        </div>
-        <div class="value-row">
-          <div class="value-icon">🎯</div>
-          <div class="value-text">
-            <strong>ジャンル別の投資配分</strong>
-            <span>IT・金融・語学などの取得資格ジャンルをドーナツチャートで可視化。偏りも一目瞭然。</span>
-          </div>
-        </div>
-        <div class="value-row">
-          <div class="value-icon">⏳</div>
-          <div class="value-text">
-            <strong>次の合格までのカウントダウン</strong>
-            <span>申込締切と試験日が「○日後」で表示。学習計画に直結する迫力ある可視化。</span>
-          </div>
-        </div>
-        <div class="value-row">
-          <div class="value-icon">💎</div>
-          <div class="value-text">
-            <strong>1時間の学習 = 資産の積み上げ</strong>
-            <span>学習タイマーで計測した時間が、累計学習時間として目標年収に向かって着実に積み上がります。</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <p style="margin-top: 24px; font-size: 12px; color: var(--muted); text-align: center;">
-      ※ 想定市場価値は試験ごとの想定年収レンジを参考値として加算したものです。実際の年収を保証するものではありません。
-    </p>
-  </section>
 
   <section id="screenshots">
     <div class="section-eyebrow">— Screenshots</div>
     <h2>主要 4 画面、<br>一気にお見せします。</h2>
-    <p class="section-sub">どれも実機キャプチャ。最新版 (v1.0.0 / bundle v19) の UI です。</p>
+    <p class="section-sub">どれも実機キャプチャ。最新版 v1.0.0 の UI です。</p>
     <div class="screenshot-grid">
       <figure>
         <img src="screenshots/home.png" alt="ダッシュボード: 連続学習日数・想定年収UP額・時間配当金" loading="lazy">
@@ -561,8 +489,8 @@ footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
         <figcaption>🏆 ポートフォリオ — 取得済 / 学習中 / 気になる で分類</figcaption>
       </figure>
       <figure>
-        <img src="screenshots/browse.png" alt="探す: 615 試験の一覧 + 多軸ソート" loading="lazy">
-        <figcaption>🔍 探す — 615 試験 / 年収UP額順 などソート可</figcaption>
+        <img src="screenshots/browse.png" alt="探す: 600+ 試験の一覧 + 多軸ソート" loading="lazy">
+        <figcaption>🔍 探す — 600+ 試験 / 年収UP額順 などソート可</figcaption>
       </figure>
       <figure>
         <img src="screenshots/yearly.png" alt="学習投資: ヒートマップ + 申込締切タイムライン" loading="lazy">
@@ -576,15 +504,21 @@ footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
       <div class="section-eyebrow">— Get Started</div>
       <h2 style="margin-bottom:16px;">次の合格を、今日から。</h2>
       <p class="section-sub" style="margin: 0 auto 32px;">人生を変える資格は、すでにあなたのスワイプを待っている。</p>
-      <a href="#" class="btn primary" style="font-size:18px; padding:18px 36px;">▶ Google Play で購入 ¥1,000</a>
+      <a href="#" class="btn primary" style="font-size:18px; padding:18px 36px;">Google Play で購入 ¥1,000</a>
       <div style="margin-top:14px; font-size:13px; color:var(--muted);">Android 8.0 以上 / 40MB</div>
     </div>
   </section>
 
   <footer>
     <div class="logo" style="justify-content:center; margin-bottom:16px;">
-      <div class="logo-icon">🎓</div>
-      <span>資格クエスト</span>
+      <div class="logo-icon">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 2 L26 2 L16 16 L26 30 L6 30 L16 16 Z" stroke="#FFFFFF" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12 7 L20 7 L16 13 Z" fill="#FFFFFF"/>
+          <circle cx="16" cy="24" r="2" fill="#FFFFFF"/>
+        </svg>
+      </div>
+      <span>Chronofolio</span>
     </div>
     <div>
       <a href="#features">機能</a>
@@ -592,7 +526,7 @@ footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
       <a href="privacy.html">プライバシーポリシー</a>
       <a href="terms.html">利用規約</a>
     </div>
-    <div style="margin-top:24px;">© 2026 資格クエスト</div>
+    <div style="margin-top:24px;">© 2026 Chronofolio</div>
   </footer>
 </div>
 
