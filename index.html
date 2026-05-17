@@ -295,6 +295,40 @@ h2 {
   .dashboard-mock { max-width: 300px; margin: 0 auto; }
 }
 
+/* Screenshot grid */
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 32px;
+}
+.screenshot-grid figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.screenshot-grid img {
+  width: 100%;
+  max-width: 240px;
+  height: auto;
+  border-radius: 18px;
+  border: 2px solid rgba(255,255,255,0.08);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.45);
+  background: linear-gradient(180deg, #1E1B4B 0%, #0F0728 100%);
+}
+.screenshot-grid figcaption {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.5;
+}
+@media (max-width: 768px) {
+  .screenshot-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .screenshot-grid img { max-width: 100%; }
+}
+
 /* CTA bottom */
 .cta-bottom { text-align: center; padding: 80px 24px; background: linear-gradient(180deg, transparent, rgba(124,58,237,0.1)); border-radius: 36px; margin: 60px 0; }
 footer { padding: 40px 0 60px; text-align: center; color: var(--muted); font-size: 13px; border-top: 1px solid var(--border); margin-top: 60px; }
@@ -511,6 +545,30 @@ footer a { color: var(--muted); text-decoration: none; margin: 0 12px; }
     <p style="margin-top: 24px; font-size: 12px; color: var(--muted); text-align: center;">
       ※ 想定市場価値は試験ごとの想定年収レンジを参考値として加算したものです。実際の年収を保証するものではありません。
     </p>
+  </section>
+
+  <section id="screenshots">
+    <div class="section-eyebrow">— Screenshots</div>
+    <h2>主要 4 画面、<br>一気にお見せします。</h2>
+    <p class="section-sub">どれも実機キャプチャ。最新版 (v1.0.0 / bundle v19) の UI です。</p>
+    <div class="screenshot-grid">
+      <figure>
+        <img src="screenshots/home.png" alt="ダッシュボード: 連続学習日数・想定年収UP額・時間配当金" loading="lazy">
+        <figcaption>📈 ダッシュボード — 連続日数・UP額・配当金を一望</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/portfolio.png" alt="ポートフォリオ: 時間予算・取得済資格のコレクション" loading="lazy">
+        <figcaption>🏆 ポートフォリオ — 取得済 / 学習中 / 気になる で分類</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/browse.png" alt="探す: 615 試験の一覧 + 多軸ソート" loading="lazy">
+        <figcaption>🔍 探す — 615 試験 / 年収UP額順 などソート可</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/yearly.png" alt="学習投資: ヒートマップ + 申込締切タイムライン" loading="lazy">
+        <figcaption>📅 学習投資 — 過去 1 年のヒートマップ + 申込締切</figcaption>
+      </figure>
+    </div>
   </section>
 
   <section id="download">
